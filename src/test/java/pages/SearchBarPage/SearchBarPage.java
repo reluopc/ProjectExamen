@@ -24,7 +24,7 @@ public class SearchBarPage extends BasePage {
     private By closeClickPrivacy = By.xpath("//button[@class='iubenda-cs-close-btn']");
     private By clickSearchBar= By.xpath("//input[@placeholder='Cerca prodotti o marca']");
     private By typeProduct=By.xpath("//input[@placeholder='Cerca prodotti o marca']");
-    private By clickOnAOCBK=By.xpath("//img[@alt='24G2ZU/BK']");
+    private By clickOnAOCBK=By.xpath("//div[@class='col-xs-12 col-sm-6 col-md-4']");
     private By clickDescription=By.xpath("//a[@href='#descrizione']");
     private By clickSpecification=By.xpath("//a[@href='#schedatecnica']");
     private By clickRecension=By.xpath("//a[@href='#recensioni']");
@@ -59,11 +59,13 @@ public class SearchBarPage extends BasePage {
         driver.findElement(clickOnAOCBK).click();
     }
 
+
     public  void clickOnDescriptionTab()
     {
         LOG.info("Click on 'DESCRIZIONE ' tab ");
         driver.findElement(clickDescription).click();
     }
+
 
     public void clickOnSpecificationsTab()
     {

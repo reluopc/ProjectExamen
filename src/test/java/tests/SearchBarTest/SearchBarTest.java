@@ -2,6 +2,7 @@ package tests.SearchBarTest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 import static pages.BasePage.sleep;
@@ -14,6 +15,8 @@ public class SearchBarTest extends BaseTest {
 
 
     String searchProduct1="AOC Full HD";
+    String message="Asus Vivobook 15 X1502 e' un notebook con processore Intel Core i7-1260P, con 12GB di RAM e SSD 512GB";
+
 
 
     @Test
@@ -32,6 +35,7 @@ public class SearchBarTest extends BaseTest {
 
         searchBarPage.clickOnDescriptionTab();
         sleep(2000);
+
 
         searchBarPage.clickOnSpecificationsTab();
         sleep(2000);
