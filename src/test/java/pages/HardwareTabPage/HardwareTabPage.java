@@ -65,20 +65,20 @@ public class HardwareTabPage extends BasePage {
 
     public void clickIntelB()
     {
-        LOG.info("Click on 'Intel'button from the left side where it is displayed 'Brand'");
+        LOG.info("Click on 'Intel'button from the left side in 'Brand' category ");
         driver.findElement(selectIntel).click();
     }
 
     public void clickI5Button()
     {
-        LOG.info("Select 'Intel Core I5' from the left side where it is displayed 'CPU'");
+        LOG.info("Select 'Intel Core I5' from the left side in 'CPU' category");
         driver.findElement(selectI5).click();
     }
 
 
     public void click1700Button()
     {
-        LOG.info("Select '1700'from the left side where it is displayed 'Socket'");
+        LOG.info("Select '1700'from the left side in 'Socket' category");
         driver.findElement(select1700).click();
     }
 

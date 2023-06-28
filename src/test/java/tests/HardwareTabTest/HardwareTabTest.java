@@ -14,26 +14,25 @@ public class HardwareTabTest extends BaseTest {
     @Test
     public void search()
     {
-        LOG.info("Click 'X' button  to close Privacy Policy");
+        LOG.info("Click 'X' button ");
         hardwareTabPage.clickClosePrivacy();
 
-        LOG.info("Verify if 'Logo' from the page is displayed");
+        LOG.info("Verify if 'Logo' is displayed");
         Assert.assertTrue(hardwareTabPage.verifyLogoHome(), "'Logo' is not displayed");
 
-        LOG.info("Click on 'HARDWARE SOFTWARE 'tab from the ribbon ");
+        LOG.info("Click on 'HARDWARE SOFTWARE' ");
         hardwareTabPage.clickHSTabRibbon();
 
-
-        LOG.info("Click on  'CPU' button category from the list ");
+        LOG.info("Click on  'CPU' ");
         hardwareTabPage.clickCPUButton();
 
-        LOG.info("Click on 'Intel' button from left side 'Brand' category ");
+        LOG.info("Click on 'Intel' button from 'Brand' category ");
         hardwareTabPage.clickIntelB();
 
-        LOG.info("Click on 'Intel Core i5 ' button from left side 'CPU' category ");
+        LOG.info("Click on 'Intel Core i5 ' button from 'CPU' category ");
         hardwareTabPage.clickI5Button();
 
-        LOG.info("Click on '1700 ' button from left side 'Socket' category ");
+        LOG.info("Click on '1700 ' button from 'Socket' category ");
         hardwareTabPage.click1700Button();
 
         LOG.info("Verify if product with code number 'BX8071512600K' it is still available ");
@@ -42,7 +41,7 @@ public class HardwareTabTest extends BaseTest {
         LOG.info("Product with code number 'BX8071512600K' add to Cart");
         hardwareTabPage.addProductToCart();
 
-        LOG.info("Click on  'Scroll to top' button to return back from the ribbon on page ");
+        LOG.info("Click on 'Scroll to top' button to return back from the ribbon on page ");
         hardwareTabPage.clickScrollTop();
 
 

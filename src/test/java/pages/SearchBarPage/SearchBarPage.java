@@ -24,12 +24,18 @@ public class SearchBarPage extends BasePage {
     private By closeClickPrivacy = By.xpath("//button[@class='iubenda-cs-close-btn']");
     private By clickSearchBar= By.xpath("//input[@placeholder='Cerca prodotti o marca']");
     private By typeProduct=By.xpath("//input[@placeholder='Cerca prodotti o marca']");
-    private By clickOnAOCBK=By.xpath("//div[@class='col-xs-12 col-sm-6 col-md-4']");
+    private By clickOnAOCBK=By.id("24G2ZU/BK");
     private By clickDescription=By.xpath("//a[@href='#descrizione']");
     private By clickSpecification=By.xpath("//a[@href='#schedatecnica']");
     private By clickRecension=By.xpath("//a[@href='#recensioni']");
     private By clickGuaranty=By.xpath("//a[@href='#garanzia']");
     private By clickRetuned=By.xpath("//a[@href='#recesso']");
+    private By deleteOnePz=By.xpath("//input[@value='1']");
+    private By chooseQuantity=By.id("setqtycart");
+    private By clickaddToCart=By.xpath("//a[@class='btn btn-first greennext']");
+    private By selectGigabyte=By.xpath("//a[@href='https://www.nexths.it/products/getSkuFromLev/query/Scheda%20Video/filterBrand/Gigabyte/page/1']");
+    private By clickONRTX3070=By.id("4719331309404");
+
 
 
 
@@ -47,7 +53,8 @@ public class SearchBarPage extends BasePage {
        driver.findElement(clickSearchBar).click();
     }
 
-    public void searchProduct (String AOC) {
+    public void searchProduct (String AOC)
+    {
         LOG.info("Searching product in 'Cerca prodotti o marca'");
         driver.findElement(typeProduct).sendKeys(AOC);
         driver.findElement(typeProduct).sendKeys(Keys.ENTER);
@@ -60,36 +67,80 @@ public class SearchBarPage extends BasePage {
     }
 
 
-    public  void clickOnDescriptionTab()
+    public  void clickOnDESCRIZIONETab()
     {
         LOG.info("Click on 'DESCRIZIONE ' tab ");
         driver.findElement(clickDescription).click();
     }
 
 
-    public void clickOnSpecificationsTab()
+    public void clickOnSCHEDATECNICATab()
     {
         LOG.info("Click on 'SCHEDA TECNICA'tab ");
         driver.findElement(clickSpecification).click();
     }
 
-    public void clickOnRecensionTab()
+    public void clickOnRECENSIONITab()
     {
         LOG.info("Click on 'RECENSIONI'tab ");
         driver.findElement(clickRecension).click();
     }
 
-    public void clickGuarantyTab()
+    public void clickGARANZIATAB()
     {
         LOG.info("Click on 'GARANZIA'tab ");
         driver.findElement(clickGuaranty).click();
     }
 
-    public void clickOnRetunedTab()
+    public void clickOnRESOFACILETab()
     {
         LOG.info("Click on 'RESO FACILE'tab ");
         driver.findElement(clickRetuned).click();
     }
+
+    public void deletePzOne()
+    {
+        LOG.info("Delete Pz '1' from the text field ");
+        driver.findElement(deleteOnePz).sendKeys(Keys.BACK_SPACE);
+    }
+
+    public void typeQuantity(String order)
+    {
+        LOG.info(" Type '3'quantity products in 'PZ' text field ");
+        driver.findElement(chooseQuantity).sendKeys(order);
+    }
+
+    public void addProductToCart()
+    {
+        LOG.info("Click on 'Aggiungi al Carrello'button to add product in cart ");
+        driver.findElement(clickaddToCart).click();
+    }
+
+
+    public void searchProduct2 (String searchProduct2)
+    {
+        LOG.info("Searching product in 'Cerca prodotti o marca'");
+        driver.findElement(typeProduct).sendKeys(searchProduct2);
+        driver.findElement(typeProduct).sendKeys(Keys.ENTER);
+    }
+
+    public void clickGigabyteRTX()
+    {
+        LOG.info("Click on 'Gigabyte 'button left side from category 'Brand'");
+        driver.findElement(selectGigabyte).click();
+    }
+
+
+    public void clickGigabyteGVn30()
+    {
+        LOG.info("Click on  number product 'GV-N3070GAMING OC-8GD 2.0'");
+        driver.findElement(clickONRTX3070).click();
+    }
+
+
+
+
+
 
 
 
