@@ -20,6 +20,26 @@ public class HardwareTabTest extends BaseTest {
         LOG.info("Verify if 'Logo' is displayed");
         Assert.assertTrue(hardwareTabPage.verifyLogoHome(), "'Logo' is not displayed");
 
+        LOG.info("Hover on 'COMPUTER TABLET NOTEBOOK'");
+        hardwareTabPage.hoverComputerTablet();
+
+        LOG.info("Hover on 'CONSUMABILE ACCESSORI'");
+        hardwareTabPage.hoverConsumabileAccessori();
+
+        LOG.info("Hover on 'HARDWARE SOFTWARE'");
+        hardwareTabPage.hoverHardwareSoftware();
+
+        LOG.info("Hover on 'MONITOR STAMPANTI PERIFERICHE'");
+        hardwareTabPage.hoverMONITORSTAMPANTIPERIFERICHE();
+
+
+        LOG.info("Hover on 'TELEFONIA WEARABLE'");
+        hardwareTabPage.hoverTELEFONIAWEARABLE();
+
+        LOG.info("Hover on 'TV AUDIO VIDEO FOTO HOME'");
+        hardwareTabPage.hoverTVAUDIOVIDEOFOTOHOME();
+
+
         LOG.info("Click on 'HARDWARE SOFTWARE' ");
         hardwareTabPage.clickHSTabRibbon();
 
@@ -43,7 +63,25 @@ public class HardwareTabTest extends BaseTest {
 
         LOG.info("Click on 'Scroll to top' button to return back from the ribbon on page ");
         hardwareTabPage.clickScrollTop();
+        sleep(1000);
 
+
+
+        LOG.info("Choose 'Alimentatori'");
+        hardwareTabPage.clickAlimentatori();
+
+        LOG.info("Choose 'Asus'");
+        hardwareTabPage.clickAsusBrand();
+
+        LOG.info("Choose '850W'");
+        hardwareTabPage.clickWatt();
+
+        LOG.info("Click on 'Asus TUF Gaming 850W Modulare 80+ Gold PFC Attivo ATX'");
+        hardwareTabPage.selectAsusTUFGaming850W();
+        sleep(1000);
+
+        LOG.info("Click 'Aggiungi al Carrello'");
+        hardwareTabPage.clickAggiungiallCarrelloAsusTUFGaming();
 
     }
 

@@ -33,8 +33,18 @@ public class SearchBarPage extends BasePage {
     private By deleteOnePz=By.xpath("//input[@value='1']");
     private By chooseQuantity=By.id("setqtycart");
     private By clickaddToCart=By.xpath("//a[@class='btn btn-first greennext']");
+
     private By selectGigabyte=By.xpath("//a[@href='https://www.nexths.it/products/getSkuFromLev/query/Scheda%20Video/filterBrand/Gigabyte/page/1']");
     private By clickONRTX3070=By.id("4719331309404");
+    private By addToCart=By.id("setqtycart");
+
+    private By selectBrand=By.xpath("//a[@href='https://www.nexths.it/products/getSkuFromLev/query/Case/filterBrand/Corsair/page/1']/span");
+    private By nextpage=By.xpath("/html/body/div[10]/div/div[2]/div/div[35]/a[1]");
+    private By cc9011191ww=By.id("CC-9011191-WW");
+    private By clickPhoto=By.xpath("//img[@src='https://cdn.nexths.it/scheda_prodotto/image/low/cc-9011191-ww.jpg']");
+    private By nextPhoto=By.xpath("//a[@class='glyphicon glyphicon-chevron-right']");
+    private By closeXbutton=By.xpath("//div[@class='ekko-lightbox modal fade in']//button[@class='close']");
+    private By AddCartCase=By.xpath("//a[@class='btn btn-first greennext']");
 
 
 
@@ -135,6 +145,59 @@ public class SearchBarPage extends BasePage {
     {
         LOG.info("Click on  number product 'GV-N3070GAMING OC-8GD 2.0'");
         driver.findElement(clickONRTX3070).click();
+    }
+    public void addCartGV()
+    {
+        LOG.info("Click on 'Aggiungi al Carrello' button to add product in cart ");
+        driver.findElement(addToCart).click();
+    }
+
+    public void searchCase (String Case)
+    {
+        LOG.info("Search product in 'Cerca prodotti o marca'");
+        driver.findElement(typeProduct).sendKeys(Case);
+        driver.findElement(typeProduct).sendKeys(Keys.ENTER);
+    }
+
+    public void clickBrand()
+    {
+        LOG.info("Click on 'Corsair'from 'Brand'category");
+        driver.findElement(selectBrand).click();
+    }
+    public void  clickPaginaSuccesiva()
+    {
+        LOG.info("Click on 'Pagina Successiva' to go next page");
+        driver.findElement(nextpage).click();
+    }
+
+    public void clickCaseCC9011191ww()
+    {
+        LOG.info("Click on 'Corsair iCUE 220T RGB Middle Tower'");
+        driver.findElement(cc9011191ww).click();
+    }
+
+    public void clickViewPhotos()
+    {
+        LOG.info("Click on'Pictures'of the Corsair iCUE");
+        driver.findElement(clickPhoto).click();
+    }
+
+    public void clickNextPhotos()
+    {
+        LOG.info("Click on 'Next'photo");
+        driver.findElement(nextPhoto).click();
+    }
+
+    public void pressXbutton()
+    {
+        LOG.info("Click 'X' button to close page with photos ");
+        driver.findElement(closeXbutton).click();
+    }
+
+    public void clickAggiungialCarrello()
+    {
+        LOG.info("Click 'Aggiungi al Carrello' ");
+        driver.findElement(AddCartCase).click();
     }
 
 

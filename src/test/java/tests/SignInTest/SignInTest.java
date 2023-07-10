@@ -23,7 +23,7 @@ public class SignInTest extends BaseTest {
     {
         LOG.info("Check 'Login' button ");
         Assert.assertTrue(signInPage.isLogInButtonDisplayed(), "Login Button is not displayed");
-        sleep(3000);
+        sleep(1000);
 
         LOG.info("Click 'X' button  to close Privacy Policy");
         signInPage.clickClosePrivacy();

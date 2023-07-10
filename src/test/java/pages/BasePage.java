@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,9 +19,8 @@ public class BasePage {
         String url = "https://www.nexths.it";
         driver.get(url);
 
-        Dimension dimension = new Dimension(1366,768);
+        Dimension dimension = new Dimension(1920,1080);
         driver.manage().window().setSize(dimension);
-
     }
 
     public static void tearDown() {
@@ -28,6 +28,7 @@ public class BasePage {
         driver.quit();
 
     }
+
 
     public static void sleep(long ms) {
         try {

@@ -39,7 +39,6 @@ public class SignInPage extends BasePage {
     private By verifyLPreferiti=By.xpath("//a[@href='https://www.nexths.it/user/UserOrders']");
     private By verifyGaranziaR=By.xpath("//a[@href='https://www.nexths.it/user/richiestaRMA']/span");
     private By verifyMailingL=By.xpath("//a[@href='https://www.nexths.it/user/usermailinglist']");
-
     private By changeAddress= By.xpath("//input[@placeholder='Via']");
     private By clickSalva=By.id("submit");
 
@@ -177,9 +176,6 @@ public class SignInPage extends BasePage {
         LOG.info("Click on 'SALVA' button to save  new number address");
         driver.findElement(clickSalva).click();
     }
-
-
-
 
 }
 

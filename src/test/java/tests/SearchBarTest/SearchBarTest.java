@@ -16,6 +16,7 @@ public class SearchBarTest extends BaseTest {
     String searchProduct1="AOC Full HD";
     String typeQuantity1="3";
     String searchProduct2="Scheda Video";
+    String searchCase="Case";
 
 
 
@@ -34,7 +35,7 @@ public class SearchBarTest extends BaseTest {
         LOG.info("Type 'AOC Full HD' ");
         searchBarPage.searchProduct(searchProduct1);
 
-        LOG.info("Click on'AOC 24G2ZU/BK Monitor' ");
+        LOG.info("Click on'AOC 24G2ZU/B Monitor' ");
         searchBarPage.clickBKproduct();
 
         LOG.info("Click on 'DESCRIZIONE' ");
@@ -61,20 +62,58 @@ public class SearchBarTest extends BaseTest {
         LOG.info("Click on'Aggiungi al Carrello' ");
         searchBarPage.addProductToCart();
 
-        LOG.info("Click again on search bar 'Cerca produtti o marca' ");
-        searchBarPage.clickToSearch();
+
 
         LOG.info("Type 'Scheda Video' ");
         searchBarPage.searchProduct2(searchProduct2);
-        sleep(3000);
+        sleep(2000);
 
         LOG.info("Click 'Gigabyte' button  ");
         searchBarPage.clickGigabyteRTX();
-        sleep(3000);
 
         LOG.info(" Click  on  'GV-N3070GAMING OC-8GD 2.0' ");
         searchBarPage.clickGigabyteGVn30();
-        sleep(3000);
+
+        LOG.info(" Click on 'Aggiungi al Carrello'");
+        searchBarPage.addCartGV();
+
+
+        LOG.info("Type 'Case'");
+        searchBarPage.searchCase(searchCase);
+
+        LOG.info("Select 'Corsair'");
+        searchBarPage.clickBrand();
+        sleep(1000);
+
+        LOG.info("Click 'Pagina Successiva' ");
+        searchBarPage.clickPaginaSuccesiva();
+
+        LOG.info("Click 'Corsair iCUE 220T'");
+        searchBarPage.clickCaseCC9011191ww();
+
+        LOG.info("Click View more photos ");
+        searchBarPage.clickViewPhotos();
+        sleep(2000);
+
+        LOG.info("Click 'Next' button to see another photo");
+        searchBarPage.clickNextPhotos();
+        sleep(1000);
+        LOG.info("Click 'Next'button");
+        searchBarPage.clickNextPhotos();
+
+        LOG.info("Click 'Next'button");
+        searchBarPage.clickNextPhotos();
+
+        LOG.info("Click 'Next'button");
+        searchBarPage.clickNextPhotos();
+
+        LOG.info("Close 'Photo'page ");
+        searchBarPage.pressXbutton();
+
+        LOG.info("Click add to 'Aggiungi al Carrello'");
+        searchBarPage.clickAggiungialCarrello();
+
+
 
 
 
