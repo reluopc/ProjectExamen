@@ -24,7 +24,7 @@ public class SearchBarPage extends BasePage {
     private By closeClickPrivacy = By.xpath("//button[@class='iubenda-cs-close-btn']");
     private By clickSearchBar= By.xpath("//input[@placeholder='Cerca prodotti o marca']");
     private By typeProduct=By.xpath("//input[@placeholder='Cerca prodotti o marca']");
-    private By clickOnAOCBK=By.id("24G2ZU/BK");
+    private By clickOnAOCBK=By.id("C24G2AE");
     private By clickDescription=By.xpath("//a[@href='#descrizione']");
     private By clickSpecification=By.xpath("//a[@href='#schedatecnica']");
     private By clickRecension=By.xpath("//a[@href='#recensioni']");
@@ -72,7 +72,7 @@ public class SearchBarPage extends BasePage {
 
     public void clickBKproduct()
     {
-        LOG.info("Select product 'AOC 24G2ZU/BK Monitor 23.8\" IPS 240Hz FullHD 1ms FreeSync Multimediale USB HDMI/DP'");
+        LOG.info("Select product 'AOC C24G2AE/BK Monitor Curvo 24\" VA 165Hz FullHD 1ms Multimediale FreeSync VGA/HDMI/DP'");
         driver.findElement(clickOnAOCBK).click();
     }
 

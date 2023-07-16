@@ -35,7 +35,7 @@ public class SearchBarTest extends BaseTest {
         LOG.info("Type 'AOC Full HD' ");
         searchBarPage.searchProduct(searchProduct1);
 
-        LOG.info("Click on'AOC 24G2ZU/B Monitor' ");
+        LOG.info("Click on'C24G2AE BK Monitor' ");
         searchBarPage.clickBKproduct();
 
         LOG.info("Click on 'DESCRIZIONE' ");

@@ -1,7 +1,6 @@
 package pages.SignInPage;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.BasePage;
@@ -23,7 +22,7 @@ public class SignInPage extends BasePage {
         return instance;
     }
 
-
+//Variabile
     private By loginIsDispalyed = By.id("loginButtonDesktop");
     private By closeClickPrivacy = By.xpath("//button[@class='iubenda-cs-close-btn']");
     private By clickLogin = By.id("loginButtonDesktop");
@@ -36,16 +35,19 @@ public class SignInPage extends BasePage {
     private By verifyNextCard=By.xpath("//a[@href='https://www.nexths.it/nextcardd/ShowNcInfo']");
     private By verifyOrdini=By.xpath("//a[@href='https://www.nexths.it/user/UserOrders']");
     private By verifyFatture=By.xpath("//a[@href='https://www.nexths.it/user/UserInvoice']");
-    private By verifyLPreferiti=By.xpath("//a[@href='https://www.nexths.it/user/UserOrders']");
+    private By verifyLPreferiti=By.xpath("/html/body/div[8]/div[2]/div[1]/div[3]/p[8]/a");
     private By verifyGaranziaR=By.xpath("//a[@href='https://www.nexths.it/user/richiestaRMA']/span");
     private By verifyMailingL=By.xpath("//a[@href='https://www.nexths.it/user/usermailinglist']");
-    private By changeAddress= By.xpath("//input[@placeholder='Via']");
-    private By clickSalva=By.id("submit");
+    private By remove1stProduct =By.xpath("//a[@alt='Rimuovi dai Preferiti']");
+    private By remove2ndProduct=By.xpath("//a[@alt='Rimuovi dai Preferiti']");
+    private By remove3rdProduct=By.xpath("//a[@alt='Rimuovi dai Preferiti']");
+    private By remove4thProduct=By.xpath("//a[@alt='Rimuovi dai Preferiti']");
+    private By remove5thProduct=By.xpath("//a[@alt='Rimuovi dai Preferiti']");
 
 
 
 
-    //Methods
+    //Metode
     public boolean isLogInButtonDisplayed()
     {
         LOG.info("Verify if 'Login' button is displayed");
@@ -142,39 +144,21 @@ public class SignInPage extends BasePage {
     }
 
 
-    public void clickOnMFatturazione()
+    public void clickOnListaPreferiti()
     {
-        LOG.info("Click on 'MFatturazione'Tab ");
-        driver.findElement(clickMFatturazione).click();
+        LOG.info("Click on 'Lista Preferiti 'Tab ");
+        driver.findElement(verifyLPreferiti).click();
     }
 
 
-    public boolean verifyIfExistVia()
+    public void clickRimouvi()
     {
-        LOG.info("Verify if 'Via 'text field exist ");
-        return driver.findElement(changeAddress).isDisplayed();
-    }
-
-
-    public void modifyAddress ()
-    {
-        LOG.info("Click on 'Via' text field and delete address");
-        driver.findElement(changeAddress).click();
-        driver.findElement(changeAddress).clear();
-    }
-
-
-    public void modifyAddress2 (String mAddress)
-    {
-        LOG.info("Insert new address");
-        driver.findElement(changeAddress).sendKeys(mAddress);
-    }
-
-
-    public void pressSalvabtn()
-    {
-        LOG.info("Click on 'SALVA' button to save  new number address");
-        driver.findElement(clickSalva).click();
+        LOG.info("Click on 'Rimouvi' button to delete products from Lista dei Desideri");
+        driver.findElement(remove1stProduct).click();
+        driver.findElement(remove2ndProduct).click();
+        driver.findElement(remove3rdProduct).click();
+        driver.findElement(remove4thProduct).click();
+        driver.findElement(remove5thProduct).click();
     }
 
 }
