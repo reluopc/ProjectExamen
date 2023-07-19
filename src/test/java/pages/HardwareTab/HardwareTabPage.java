@@ -39,13 +39,13 @@ public class HardwareTabPage extends BasePage {
     private By selectI5= By.cssSelector("#myNavbar > ul:nth-child(6) > li:nth-child(3) > a");
     private By select1700=By.xpath("//*[@id='myNavbar']/ul[2]/ul/ul[1]/li[2]/a");
     private By verifyProduct =By.xpath("/html/body/div[13]/div/div[2]/div[1]/div[17]/div/div/div[1]/b");
-    private By clickAddCart= By.xpath("/html/body/div[13]/div/div[2]/div[1]/div[17]/div/div/div[4]/button/span");
-    private By clickToTop= By.xpath("//a[@class='scrolltotop']");
+    private By clickOn12600k=By.id("BX8071512600K");
+    private By clickAddCart= By.xpath("//a[@class='btn btn-first greennext']");
 
-    private By clickOnAlimentatori=By.xpath("//div[@class='col-sm-3 col-md-2 text-center topbar2 topliv1']/a[@href='https://www.nexths.it/Products/getSkuFromLev/page/1/l0/Hardware%20Software/l1/Alimentatori']");
+    private By clickOnAlimentatori=By.cssSelector("body > div.container-fluid.filtertopbar2.hidden-xs > div > div:nth-child(1) > a");
     private By clickAsus=By.xpath("//a[@href='https://www.nexths.it/Products/getSkuFromLev/page/1/l0/Hardware%20Software/l1/Alimentatori/filterBrand/Asus']");
     private By clickOnWatt = By.xpath("//a[@href='https://www.nexths.it/Products/getSkuFromLev/page/1/l0/Hardware%20Software/l1/Alimentatori/filterBrand/Asus/filterAttributi/Watt%3D850%20W']");
-    private By selectTufGaming=By.xpath("//img[@src='https://cdn.nexths.it/scheda_prodotto/image/4711081786573.jpg']");
+    private By selectTufGaming=By.id("4711081786573");
     private By addToCartAsus=By.xpath("//a[@class='btn btn-first greennext']");
 
 
@@ -146,18 +146,17 @@ public class HardwareTabPage extends BasePage {
         return driver.findElement(verifyProduct).isDisplayed();
     }
 
+    public void clickOn12600kProduct()
+    {
+        LOG.info("Click on 'Intel Core i5-12600K 10 Core 2.8GHz 20MB sk1700 Box'");
+        driver.findElement(clickOn12600k).click();
+    }
+
     public void addProductToCart()
     {
         LOG.info("Click on 'Cart' button ");
         driver.findElement(clickAddCart).click();
     }
-
-    public void clickScrollTop()
-    {
-        LOG.info("Click 'Scroll top' button to turn back top on the page ");
-        driver.findElement(clickToTop).click();
-    }
-
 
     public void clickAlimentatori()
     {

@@ -19,26 +19,25 @@ public class CartTest extends BaseTest {
     @Test
     public void cart() {
 
-        LOG.info("Click 'X' button  to close Privacy Policy");
-        cartPage.clickClosePrivacy();
+//        LOG.info("Click 'X' button  to close Privacy Policy");
+//        cartPage.clickClosePrivacy();
 
-        LOG.info("Click on 'Login' button");
-        signInPage.clickOnLoginButton();
-
-
-        LOG.info("Add email intro 'Email' field");
-        signInPage.addEmailField(emailAddress);
-
-        LOG.info("Add password intro 'Password' field ");
-        signInPage.addPasswordlField(password1);
-
-        LOG.info("Click on 'Login' button to enter intro Account");
-        signInPage.clickLoginButtonTo();
+//        LOG.info("Click on 'Login' button");
+//        signInPage.clickOnLoginButton();
+//
+//
+//        LOG.info("Add email intro 'Email' field");
+//        signInPage.addEmailField(emailAddress);
+//
+//        LOG.info("Add password intro 'Password' field ");
+//        signInPage.addPasswordlField(password1);
+//
+//        LOG.info("Click on 'Login' button to enter intro Account");
+//        signInPage.clickLoginButtonTo();
 
 
         LOG.info("Verify if 'Cart' it is display on home page");
         cartPage.verifyCartIsDisplay();
-        sleep(2000);
 
 
         LOG.info("Click on 'Cart' button to open  ");

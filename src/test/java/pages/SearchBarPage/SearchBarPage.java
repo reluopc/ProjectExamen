@@ -35,8 +35,8 @@ public class SearchBarPage extends BasePage {
     private By clickaddToCart=By.xpath("//a[@class='btn btn-first greennext']");
 
     private By selectGigabyte=By.xpath("//a[@href='https://www.nexths.it/products/getSkuFromLev/query/Scheda%20Video/filterBrand/Gigabyte/page/1']");
-    private By clickONRTX3070=By.id("4719331309404");
-    private By addToCart=By.id("setqtycart");
+    private By clickONRTX3070=By.xpath("//img[@src='https://cdn.nexths.it/scheda_prodotto/image/4719331309404.jpg']");
+    private By addToCart=By.xpath("//a[@class='btn btn-first greennext']");
 
     private By selectBrand=By.xpath("//a[@href='https://www.nexths.it/products/getSkuFromLev/query/Case/filterBrand/Corsair/page/1']/span");
     private By nextpage=By.xpath("/html/body/div[10]/div/div[2]/div/div[35]/a[1]");

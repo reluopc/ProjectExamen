@@ -44,6 +44,8 @@ public class SignInPage extends BasePage {
     private By remove4thProduct=By.xpath("//a[@alt='Rimuovi dai Preferiti']");
     private By remove5thProduct=By.xpath("//a[@alt='Rimuovi dai Preferiti']");
 
+    private By returnhomepage=By.xpath("//img[@src='https://cdn.nexths.it/immagini/2017/desktop-next.png']");
+
 
 
 
@@ -159,6 +161,12 @@ public class SignInPage extends BasePage {
         driver.findElement(remove3rdProduct).click();
         driver.findElement(remove4thProduct).click();
         driver.findElement(remove5thProduct).click();
+    }
+
+    public void returnHOMEPAGE()
+    {
+        LOG.info("Click on 'Logo'and return to homepage");
+        driver.findElement(returnhomepage).click();
     }
 
 }

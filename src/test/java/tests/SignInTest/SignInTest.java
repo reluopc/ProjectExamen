@@ -75,5 +75,9 @@ public class SignInTest extends BaseTest {
         LOG.info("Click on 'Rimouvi'button");
         signInPage.clickRimouvi();
 
+        LOG.info("Return to Home Page");
+        signInPage.returnHOMEPAGE();
+        sleep(1000);
+
     }
 }

@@ -26,8 +26,8 @@ public class SearchBarTest extends BaseTest {
     public void search(){
 
 
-        LOG.info("Click 'X' button  to close Privacy Policy");
-        searchBarPage.clickClosePrivacy();
+//        LOG.info("Click 'X' button  to close Privacy Policy");
+//        searchBarPage.clickClosePrivacy();
 
         LOG.info("Click on search bar 'Cerca produtti o marca' ");
         searchBarPage.clickToSearch();
@@ -66,16 +66,19 @@ public class SearchBarTest extends BaseTest {
 
         LOG.info("Type 'Scheda Video' ");
         searchBarPage.searchProduct2(searchProduct2);
-        sleep(2000);
+        sleep(1000);
 
         LOG.info("Click 'Gigabyte' button  ");
         searchBarPage.clickGigabyteRTX();
 
+
         LOG.info(" Click  on  'GV-N3070GAMING OC-8GD 2.0' ");
         searchBarPage.clickGigabyteGVn30();
+        sleep(1000);
 
         LOG.info(" Click on 'Aggiungi al Carrello'");
         searchBarPage.addCartGV();
+        sleep(1000);
 
 
         LOG.info("Type 'Case'");
@@ -93,7 +96,7 @@ public class SearchBarTest extends BaseTest {
 
         LOG.info("Click View more photos ");
         searchBarPage.clickViewPhotos();
-        sleep(2000);
+        sleep(1000);
 
         LOG.info("Click 'Next' button to see another photo");
         searchBarPage.clickNextPhotos();
@@ -112,6 +115,10 @@ public class SearchBarTest extends BaseTest {
 
         LOG.info("Click add to 'Aggiungi al Carrello'");
         searchBarPage.clickAggiungialCarrello();
+
+        LOG.info("Return to Home Page");
+        signInPage.returnHOMEPAGE();
+        sleep(1000);
 
 
 

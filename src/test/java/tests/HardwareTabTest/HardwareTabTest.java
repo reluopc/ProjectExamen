@@ -14,8 +14,8 @@ public class HardwareTabTest extends BaseTest {
     @Test
     public void search()
     {
-        LOG.info("Click 'X' button ");
-        hardwareTabPage.clickClosePrivacy();
+//        LOG.info("Click 'X' button ");
+//        hardwareTabPage.clickClosePrivacy();
 
         LOG.info("Verify if 'Logo' is displayed");
         Assert.assertTrue(hardwareTabPage.verifyLogoHome(), "'Logo' is not displayed");
@@ -58,17 +58,19 @@ public class HardwareTabTest extends BaseTest {
         LOG.info("Verify if product with code number 'BX8071512600K' it is still available ");
         Assert.assertTrue(hardwareTabPage.verifyProductAvailable(),"'BX8071512600K' it is not available");
 
+        LOG.info("Click on 'Intel Core i5-12600K '");
+        hardwareTabPage.clickOn12600kProduct();
+
         LOG.info("Product with code number 'BX8071512600K' add to Cart");
         hardwareTabPage.addProductToCart();
 
-        LOG.info("Click on 'Scroll to top' button to return back from the ribbon on page ");
-        hardwareTabPage.clickScrollTop();
-        sleep(1000);
 
-
+        LOG.info("Click on 'HARDWARE SOFTWARE' ");
+        hardwareTabPage.clickHSTabRibbon();
 
         LOG.info("Choose 'Alimentatori'");
         hardwareTabPage.clickAlimentatori();
+        sleep(1000);
 
         LOG.info("Choose 'Asus'");
         hardwareTabPage.clickAsusBrand();
@@ -78,10 +80,15 @@ public class HardwareTabTest extends BaseTest {
 
         LOG.info("Click on 'Asus TUF Gaming 850W Modulare 80+ Gold PFC Attivo ATX'");
         hardwareTabPage.selectAsusTUFGaming850W();
-        sleep(1000);
+        sleep(3000);
 
         LOG.info("Click 'Aggiungi al Carrello'");
         hardwareTabPage.clickAggiungiallCarrelloAsusTUFGaming();
+        sleep(2000);
+
+        LOG.info("Return to Home Page");
+        signInPage.returnHOMEPAGE();
+        sleep(1000);
 
     }
 
